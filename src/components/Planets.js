@@ -1,7 +1,31 @@
 import React from 'react'
+import { Card, Grid } from 'semantic-ui-react'
 
-export default function Planets() {
+export default function Planets({ data }) {
   return (
-    <div>Planets</div>
+    <>
+        <h1>Star Wars Planets</h1>
+        <Grid columns={3}>
+            {data.map((planet, i) => {
+                return (
+                    <Grid.Column key={i}>
+                        <Card>
+                            <Card.Content>
+                                <Card.Header>Planet Name: {planet.name}</Card.Header>
+                                <Card.Description>
+                                    <strong>Climate</strong>
+                                    <p>{planet.climate}</p>
+                                    <strong>Population</strong>
+                                    <p>{planet.population}</p>
+                                    <strong>Terrain</strong>
+                                    <p>{planet.terrain}</p>
+                                </Card.Description>
+                            </Card.Content>
+                        </Card>
+                    </Grid.Column>
+                )
+            })}
+        </Grid>
+    </>
   )
 }

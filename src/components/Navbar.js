@@ -8,10 +8,13 @@ export default function Navbar()
         <Menu inverted>
         <Container>
         <Link to='/'>
-            <Menu.Item name="star wars API"></Menu.Item>
+            <Menu.Item name="Star Wars App"></Menu.Item>
         </Link>
         <Link to='/planets'>
             <Menu.Item name="Planets"></Menu.Item>
+        </Link>
+        <Link to='/residents'>
+            <Menu.Item name="Residents"></Menu.Item>
         </Link>
         </Container>
         </Menu>
