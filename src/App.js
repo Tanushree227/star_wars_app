@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/layouts/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Container, Dimmer, Loader } from 'semantic-ui-react';
 import Home from './components/Home';
 import Planets from './components/Planets';
+import Layout from './components/layouts/Layout';
 
 function App() {
   const [planets, setPlanets] = useState([]);
@@ -21,23 +21,20 @@ function App() {
   },[]);
 
   return (
-    <>
-      <Router>
-        <Navbar />
+    <Layout>
         <Container>
-        {loading ? (
-          <Dimmer active inverted>
-            <Loader inverted>Loading....</Loader>
-          </Dimmer>
-        ) : (
-          <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route exact path='/planets' element={<Planets data={planets} />} />
-          </Routes>
-        )}
+          {loading ? (
+            <Dimmer active inverted>
+              <Loader inverted>Loading....</Loader>
+            </Dimmer>
+          ) : (
+            <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route exact path='/planets' element={<Planets data={planets} />} />
+            </Routes>
+          )}
         </Container>
-      </Router>
-    </>
+    </Layout>
   );
 }
 
