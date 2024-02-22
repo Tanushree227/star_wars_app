@@ -7,7 +7,7 @@ export default function Home() {
     <Card>
       <div className={classes.image}>
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOhNPkJBeTHxee9QdgVxw8SVVVYxDo4jpl9UR7KDwkcA&s"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2560px-Star_Wars_Logo.svg.png"
           alt="star wars logo"
         />
       </div>

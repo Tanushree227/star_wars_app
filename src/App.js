@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Container, Dimmer, Loader } from 'semantic-ui-react';
 import Home from './components/Home';
 import Planets from './components/Planets';
+import Residents from './components/Residents'; // Import the Residents component
 import Layout from './components/layouts/Layout';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
     }
 
     fetchPlanets();
-  },[]);
+  }, []);
 
   return (
     <Layout>
@@ -31,6 +32,7 @@ function App() {
             <Routes>
               <Route exact path='/' element={<Home />} />
               <Route exact path='/planets' element={<Planets data={planets} />} />
+              <Route path='/residents/:planetId' element={<Residents planets={planets} />} />
             </Routes>
           )}
         </Container>
