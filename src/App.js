@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowseRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 import Home from './components/Home';
 import Planets from './components/Planets';
@@ -18,7 +18,7 @@ function App() {
     }
 
     fetchPlanets();
-  }, []);
+  },[]);
 
   return (
     <>
@@ -26,8 +26,8 @@ function App() {
         <Navbar />
         <Container>
           <Routes>
-            <Route exact path='/'><Home /></Route>
-            <Route exact path='/planets'><Planets /></Route>
+            <Route exact path='/' element={<Home />}></Route>
+            <Route exact path='/planets' element={<Planets />}></Route>
           </Routes>
         </Container>
       </Router>
