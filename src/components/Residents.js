@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, List } from 'semantic-ui-react';
+import { List } from 'semantic-ui-react';
 
 function Residents({ residentsURLs }) {
   const [residents, setResidents] = useState([]);
@@ -26,7 +26,7 @@ function Residents({ residentsURLs }) {
           <List.Item key={index}>
             <List.Icon name='user' />
             <List.Content>
-              <List.Header>{resident.name}</List.Header>
+              <List.Header>Resident Name: {resident.name}</List.Header>
               <List.Description>
                 <strong>Height:</strong> {resident.height}<br />
                 <strong>Mass:</strong> {resident.mass}<br />
