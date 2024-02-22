@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router";
-import classes from "./Planets.module.css";
-import Card from "./ui/Card";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router';
+import classes from './Planets.module.css';
+import Card from './ui/Card';
 
 export default function Residents({ planets }) {
   const [residents, setResidents] = useState([]);
@@ -31,24 +31,20 @@ export default function Residents({ planets }) {
   return (
     <>
       <h1>Residents of {planets[planetId].name}</h1>
-      {residents.length === 0 ? (
-        <p>No residents in this planet.</p>
-      ) : (
-        <ul>
-          {residents.map((resident, index) => (
-            <li className={classes.item} key={index}>
-              <Card>
-                <div className={classes.content}>
-                  <p><strong>Name: </strong> {resident.name}</p>
-                  <p><strong>Height: </strong> {resident.height}</p>
-                  <p><strong>Mass: </strong> {resident.mass}</p>
-                  <p><strong>Gender: </strong>{resident.gender}</p>
-                </div>
-              </Card>
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul>
+        {residents.map((resident, index) => (
+          <li className={classes.item} key={index}>
+          <Card>
+            <div className={classes.content}>
+              <p><strong>Name: </strong> {resident.name}</p>
+              <p><strong>Height: </strong> {resident.height}</p>
+              <p><strong>Mass: </strong> {resident.mass}</p>
+              <p><strong>Gender: </strong>{resident.gender}</p>
+            </div>
+          </Card>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
