@@ -13,9 +13,6 @@ export default function Navbar()
         <Link to='/planets'>
             <Menu.Item name="Planets"></Menu.Item>
         </Link>
-        <Link to='/residents'>
-            <Menu.Item name="Residents"></Menu.Item>
-        </Link>
         </Container>
         </Menu>
     );

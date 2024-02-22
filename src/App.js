@@ -35,7 +35,6 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/planets' element={<Planets data={planets} />} />
-            <Route exact path='/residents' element={<Residents />} />
           </Routes>
         )}
         </Container>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Grid } from 'semantic-ui-react'
+import Residents from './Residents'
 
 export default function Planets({ data }) {
   return (
@@ -19,6 +20,7 @@ export default function Planets({ data }) {
                                     <p>{planet.population}</p>
                                     <strong>Terrain</strong>
                                     <p>{planet.terrain}</p>
+                                    <Residents residentsURLs = {planet.residents} />
                                 </Card.Description>
                             </Card.Content>
                         </Card>
