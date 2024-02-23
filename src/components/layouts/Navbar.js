@@ -13,15 +13,5 @@ export default function Navbar()
                 </ul>
             </nav>
         </header>
-        /* <Menu inverted>
-        <Container>
-        <Link to='/'>
-            <Menu.Item name="Star Wars App"></Menu.Item>
-        </Link>
-        <Link to='/planets'>
-            <Menu.Item name="Planets"></Menu.Item>
-        </Link>
-        </Container>
-        </Menu> */
     );
 }
