@@ -31,20 +31,24 @@ export default function Residents({ planets }) {
   return (
     <>
       <h1>Residents of {planets[planetId].name}</h1>
-      <ul>
-        {residents.map((resident, index) => (
-          <li className={classes.item} key={index}>
-          <Card>
-            <div className={classes.content}>
-              <p><strong>Name: </strong> {resident.name}</p>
-              <p><strong>Height: </strong> {resident.height}</p>
-              <p><strong>Mass: </strong> {resident.mass}</p>
-              <p><strong>Gender: </strong>{resident.gender}</p>
-            </div>
-          </Card>
-          </li>
-        ))}
-      </ul>
+      {residents.length === 0 ? (
+        <div>No residents in this planet.</div>
+      ) : (
+        <ul>
+          {residents.map((resident, index) => (
+            <li className={classes.item} key={index}>
+            <Card>
+              <div className={classes.content}>
+                <p><strong>Name: </strong> {resident.name}</p>
+                <p><strong>Height: </strong> {resident.height}</p>
+                <p><strong>Mass: </strong> {resident.mass}</p>
+                <p><strong>Gender: </strong>{resident.gender}</p>
+              </div>
+            </Card>
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 }
