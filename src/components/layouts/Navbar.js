@@ -5,7 +5,7 @@ export default function Navbar()
 {
     return (
         <header className={classes.header}>
-            <div className={classes.logo}>StarWars API App</div>
+            <div className={classes.logo}>SWAPI App</div>
             <nav>
                 <ul>
                     <li><Link to='/'>Home</Link></li>
