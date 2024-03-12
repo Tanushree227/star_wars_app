@@ -2,19 +2,14 @@
     margin: 3rem auto;
     width: 90%;
     max-width: 40rem;
+    margin-bottom: 6rem;
   }
   footer {
     background-color: #f8f9fa;
     color: #6c757d;
     text-align: center;
     padding: 10px 0;
-    width: 30%;
     position: fixed;
     bottom: 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  }
-  @media (max-width: 768px) {
-    footer {
-      width: 100%;
-    }
   }
